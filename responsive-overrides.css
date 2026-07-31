@@ -1,0 +1,8 @@
+@media (min-width:801px) and (max-width:1100px){
+  .site-header{padding:0 32px}.section-wrap{padding-left:32px;padding-right:32px}
+  .hero{min-height:620px;padding-top:65px;padding-bottom:70px;grid-template-columns:1.05fr .95fr;gap:30px}.hero h1{font-size:clamp(62px,8vw,84px)}.hero-text{font-size:15px;max-width:420px}.hero-aside{height:430px}.hero-avatar-wrap{width:255px;height:335px}.hero-note{right:0}.hero-orbit{width:340px}
+  .work{padding-top:115px;padding-bottom:115px}.section-heading{margin-bottom:48px}.section-heading h2{font-size:clamp(55px,7vw,76px)}.project-card{padding:32px 32px 0}.project-intro h3{font-size:clamp(76px,10vw,110px)}.project-visual{height:380px;margin:0 -32px}.project-visual img{height:425px}.mas-visual{height:340px;margin:0 -32px}
+  .case-study,.mas-case{padding-top:120px;padding-bottom:100px}.case-top{gap:45px}.case-top h2{font-size:clamp(60px,8vw,90px)}.case-stats{margin:85px 0 95px}.case-stats strong{font-size:48px}.story-grid{gap:40px;margin-bottom:110px}.screens-showcase{gap:42px;margin-bottom:110px}.decision-grid{margin-bottom:110px}.states-section{gap:50px;margin-bottom:110px}.states-list>div{grid-template-columns:38px 1fr 1fr}.wide-screen{margin-bottom:110px}
+  .mas-product-context{gap:45px;margin-bottom:90px}.mas-proof{margin-bottom:95px}.mas-features{margin-bottom:100px}.mas-bottom{gap:35px}.mas-links{min-width:190px}
+  .about{padding-top:115px;padding-bottom:120px}.about-grid{gap:60px}.about-lead{font-size:23px}.contact-card{min-height:430px;padding:42px 42px 24px}
+}
