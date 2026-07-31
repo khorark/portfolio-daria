@@ -13,4 +13,4 @@ The current CV is included at `public/assets/resume-daria.pdf`.
 
 ## GitHub Pages
 
-The site is intentionally dependency-free: GitHub Pages can serve the repository root directly. In repository settings, choose **Pages → Deploy from a branch**, select the default branch and the `/ (root)` folder.
+The site is intentionally dependency-free. GitHub Pages is configured through `.github/workflows/pages.yml` and deploys automatically after changes reach `main`.
