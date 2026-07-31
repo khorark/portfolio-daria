@@ -14,4 +14,5 @@ let lang = 'en';
 const setLanguage = (next) => { lang = next; document.documentElement.lang = next; document.querySelectorAll('[data-i18n]').forEach((el)=>{const value=translations[next][el.dataset.i18n]; if(value) el.innerHTML=value;}); document.getElementById('langSwitch').textContent=next==='en'?'RU':'EN';};
 document.getElementById('langSwitch').addEventListener('click',()=>setLanguage(lang==='en'?'ru':'en'));
 document.getElementById('themeSwitch').addEventListener('click',()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'light':'dark';document.getElementById('themeSwitch').textContent=dark?'☼':'☾';});
-setLanguage('en');
+const initialLang = navigator.language.toLowerCase().startsWith('ru') ? 'ru' : 'en';
+setLanguage(initialLang);
