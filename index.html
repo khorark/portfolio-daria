@@ -3,102 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Daria Khoroshikh — Product Designer. UX for complex systems, B2B products and mobile applications." />
-    <meta name="theme-color" content="#101313" />
-    <meta property="og:title" content="Daria Khoroshikh — Product Designer" />
-    <meta property="og:description" content="Designing clarity for complex products." />
-    <meta property="og:type" content="website" />
+    <meta name="description" content="Daria Khoroshikh — Product & UX/UI Designer." />
+    <meta name="theme-color" content="#f5f4f0" />
     <title>Daria Khoroshikh — Product Designer</title>
     <link rel="icon" href="public/assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="overrides.css" />
-    <link rel="stylesheet" href="mas-overrides.css" />
-    <link rel="stylesheet" href="responsive-overrides.css" />
   </head>
   <body>
-    <div class="noise"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="heatmap" id="heatmap" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Daria Khoroshikh home">
-        <span class="brand-mark">DK</span>
-        <span>Daria Khoroshikh</span>
-      </a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#work" data-i18n="navWork">Work</a>
-        <a href="#about" data-i18n="navAbout">About</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
-      </nav>
+      <a class="brand" href="#top" aria-label="На главную"><span class="brand-mark">DK</span><span>Daria Khoroshikh</span></a>
+      <nav class="nav" aria-label="Навигация"><a href="#work" data-ru="Работы" data-en="Work">Работы</a><a href="#about" data-ru="Обо мне" data-en="About">Обо мне</a><a href="#contact" data-ru="Контакты" data-en="Contact">Контакты</a></nav>
       <div class="header-tools">
-        <button class="lang-switch" id="langSwitch" type="button" aria-label="Switch language">EN</button>
-        <button class="theme-switch" id="themeSwitch" type="button" aria-label="Switch theme">☼</button>
+        <div class="view-switch" role="group" aria-label="Режим просмотра работ"><button class="view-button is-active" type="button" data-view="carousel" aria-pressed="true" title="Фокусный просмотр"><span class="icon-cards"></span><span class="sr-only">Карусель</span></button><button class="view-button" type="button" data-view="overview" aria-pressed="false" title="Все проекты"><span class="icon-list"></span><span class="sr-only">Список</span></button></div>
+        <button class="lang-switch" id="langSwitch" type="button" aria-label="Switch language">EN</button><button class="theme-switch" id="themeSwitch" type="button" aria-label="Переключить тему">◐</button>
       </div>
     </header>
-
     <main id="top">
-      <section class="hero section-wrap">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot"></span><span data-i18n="available">Available for new opportunities</span></p>
-          <h1><span data-i18n="heroLine1">Designing clarity</span><br /><em data-i18n="heroLine2">for complex products.</em></h1>
-          <p class="hero-text" data-i18n="heroText">I’m Daria, a Product Designer who turns complex business processes into clear, useful experiences — from first hypothesis to shipped product.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work" data-i18n="seeWork">See selected work <span>↘</span></a>
-            <a class="text-link" href="#contact" data-i18n="getInTouch">Get in touch <span>↗</span></a>
-          </div>
-        </div>
-        <div class="hero-aside">
-          <div class="hero-note"><span class="note-number">11+</span><span data-i18n="years">years shaping digital experiences</span></div>
-          <div class="hero-orbit orbit-one"></div>
-          <div class="hero-orbit orbit-two"></div>
-          <div class="hero-avatar-wrap"><img src="public/assets/daria.jpg" alt="Daria Khoroshikh" class="hero-avatar" /><span class="avatar-caption">SPB / 2026</span></div>
-        </div>
+      <section class="hero shell">
+        <div><p class="eyebrow"><span class="live-dot"></span><span data-ru="Открыта к новым предложениям" data-en="Available for new opportunities">Открыта к новым предложениям</span></p><h1 data-ru="Проектирую ясность<br /><em>для сложных продуктов.</em>" data-en="Designing clarity<br /><em>for complex products.</em>">Проектирую ясность<br /><em>для сложных продуктов.</em></h1><p class="hero-copy" data-ru="Product & UX/UI Designer. Превращаю сложные бизнес-задачи в понятные сценарии, интерфейсы и готовые продукты." data-en="Product & UX/UI Designer. I turn complex business problems into clear flows, interfaces and shipped products.">Product & UX/UI Designer. Превращаю сложные бизнес-задачи в понятные сценарии, интерфейсы и готовые продукты.</p><a class="button dark-button" href="#work"><span data-ru="Смотреть кейсы" data-en="View cases">Смотреть кейсы</span><b>↘</b></a></div>
+        <div class="hero-side"><p class="side-number">11+<span data-ru="лет в дизайне цифровых продуктов" data-en="years designing digital products">лет в дизайне цифровых продуктов</span></p><div class="portrait-frame"><img src="public/assets/daria.jpg" alt="Daria Khoroshikh" /><span>SPB / 2026</span></div><p class="coordinate">59.9343° N<br />30.3351° E</p></div>
       </section>
-
-      <section class="ticker" aria-label="Areas of expertise">
-        <div class="ticker-track"><span>PRODUCT DESIGN</span><i>✳</i><span>UX STRATEGY</span><i>✳</i><span>B2B SYSTEMS</span><i>✳</i><span>MOBILE APPS</span><i>✳</i><span>PRODUCT DESIGN</span><i>✳</i><span>UX STRATEGY</span><i>✳</i><span>B2B SYSTEMS</span><i>✳</i><span>MOBILE APPS</span></div>
+      <section class="work" id="work" aria-label="Кейсы">
+        <div class="work-head shell"><div><p class="eyebrow">01 / <span data-ru="выбранные работы" data-en="selected work">выбранные работы</span></p><h2 data-ru="Продукты —<br /><em>в фокусе.</em>" data-en="Products —<br /><em>in focus.</em>">Продукты —<br /><em>в фокусе.</em></h2></div><p class="view-note"><span class="view-label" data-ru="Фокусный просмотр" data-en="Focus view">Фокусный просмотр</span><br /><span data-ru="Листайте или перетаскивайте" data-en="Scroll or drag to browse">Листайте или перетаскивайте</span></p></div>
+        <div class="case-carousel" id="caseCarousel" tabindex="0" aria-label="Горизонтальная карусель кейсов"><div class="case-track">
+          <article class="case-card case-mvideo"><div class="case-wire"><span></span><span></span><span></span></div><div class="case-content"><p>01 — Retail ecosystem</p><h3>М.Видео</h3><p class="case-summary">UX/UI для e-commerce сценариев</p><span class="case-status">Case study in progress</span></div><span class="case-arrow">↘</span></article>
+          <article class="case-card case-mas-web"><div class="mini-dashboard"><i></i><i></i><i></i><i></i></div><div class="case-content"><p>02 — B2B web platform</p><h3>MAS<br />Project <em>Web</em></h3><p class="case-summary">Управление эффективностью компании</p><span class="case-status">Case study in progress</span></div><span class="case-arrow">↘</span></article>
+          <article class="case-card case-mas-mobile"><img src="public/assets/mas-project/hero.webp" alt="MAS Project mobile app" /><div class="case-content"><p>03 — iOS / Android</p><h3>MAS<br />Project <em>Mobile</em></h3><p class="case-summary">Корпоративный продукт в кармане</p><span class="case-status">Case study in progress</span></div><span class="case-arrow">↘</span></article>
+          <article class="case-card case-incurrency"><div class="currency-orbit">$ <span>¥</span> €</div><img src="public/assets/incurrency-main.png" alt="InCurrency application interface" /><div class="case-content"><p>04 — Personal product</p><h3>InCurrency</h3><p class="case-summary">Конвертер, в котором виден ответ</p><span class="case-status ready">Case study ready</span></div><span class="case-arrow">↘</span></article>
+          <article class="case-card case-npd"><div class="beauty-shape one"></div><div class="beauty-shape two"></div><div class="case-content"><p>05 — Beauty tech</p><h3>NPD<br /><em>Beauty</em></h3><p class="case-summary">Цифровой опыт для beauty-направления</p><span class="case-status">Case study in progress</span></div><span class="case-arrow">↘</span></article>
+          <article class="case-card case-cs"><div class="landing-lines"><i></i><i></i><i></i><i></i><i></i></div><div class="case-content"><p>06 — Landing page</p><h3>CS</h3><p class="case-summary">Лендинг с ясной продуктовой подачей</p><span class="case-status">Selected screens soon</span></div><span class="case-arrow">↘</span></article>
+          <article class="case-card case-nebostroy"><div class="building-grid"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="case-content"><p>07 — Landing page</p><h3>Небострой</h3><p class="case-summary">Недвижимость — без визуального шума</p><span class="case-status">Selected screens soon</span></div><span class="case-arrow">↘</span></article>
+        </div></div>
+        <div class="carousel-controls shell"><button id="prevCase" class="round-control" type="button" aria-label="Предыдущий кейс">←</button><div class="case-count"><span id="currentCase">01</span> <i></i> 07</div><button id="nextCase" class="round-control" type="button" aria-label="Следующий кейс">→</button></div>
       </section>
-
-      <section class="work section-wrap" id="work">
-        <div class="section-heading"><p class="eyebrow">01 / <span data-i18n="selectedWork">Selected work</span></p><h2 data-i18n="workTitle">One product,<br /><em>many decisions.</em></h2></div>
-        <article class="project-card">
-          <div class="project-intro">
-            <div><p class="project-kicker">PERSONAL PROJECT · 2022</p><h3>InCurrency</h3><p class="project-summary" data-i18n="projectSummary">A focused currency converter built around one simple idea: make the right number visible, even when the connection isn’t.</p></div>
-            <a href="#case-study" class="round-arrow" aria-label="Open InCurrency case study">↘</a>
-          </div>
-          <div class="project-visual"><div class="visual-glow"></div><div class="project-icon"><img src="public/assets/incurrency-logo.png" alt="InCurrency app icon" /></div><img src="public/assets/incurrency-main.png" alt="InCurrency currency converter interface" /><div class="project-sticker">100+<small data-i18n="currencies">currencies</small></div></div>
-          <div class="project-meta"><span>Product design</span><span>Mobile · iOS / Android</span><span>Solo designer</span><span class="meta-arrow">↗</span></div>
-        </article>
-        <article class="project-card mas-card">
-          <div class="project-intro"><div><p class="project-kicker">CORPORATE PRODUCT · 2018—2019</p><h3>MAS<br /><em>Project</em></h3><p class="project-summary" data-i18n="masSummary">A mobile extension of a corporate performance and motivation system — adapted from desktop without losing the depth of the product.</p></div><a href="#mas-case" class="round-arrow" aria-label="Open MAS Project case study">↘</a></div>
-          <div class="mas-visual"><img src="public/assets/mas-project/hero.webp" alt="MAS Project mobile app login screen" /><div class="mas-label">B2B<br /><small>mobile app</small></div></div>
-          <div class="project-meta"><span>B2B product</span><span>Mobile · Android</span><span>UX / UI design</span><span class="meta-arrow">↗</span></div>
-        </article>
-      </section>
-
-      <section class="case-study section-wrap" id="case-study">
-        <div class="case-top"><div><p class="eyebrow">02 / <span data-i18n="caseStudy">Case study</span></p><h2>InCurrency<br /><em data-i18n="caseHeadline">quietly does the math.</em></h2></div><div class="case-side"><p data-i18n="caseLead">A compact utility for travelers, shoppers and anyone who needs to translate value between currencies without friction.</p><div class="case-tags"><span>UX / UI</span><span>iOS + Android</span><span>Offline-first</span></div></div></div>
-        <div class="case-stats"><div><strong>100+</strong><span data-i18n="statCurrencies">currencies available</span></div><div><strong>4</strong><span data-i18n="statCurrenciesAtOnce">currencies viewed at once</span></div><div><strong>0</strong><span data-i18n="statInternet">internet required for saved rates</span></div><div><strong>1</strong><span data-i18n="statDesigner">designer from icon to interface</span></div></div>
-        <div class="story-grid"><div class="story-label"><span>THE<br />WHY</span></div><div class="story-copy"><h3 data-i18n="problemTitle">The useful answer should be the first thing you see.</h3><p data-i18n="problemText">The concept started as a personal hypothesis: would a fast, calm and genuinely usable converter be useful in everyday life? The product needed to work for a quick glance in a new city, a price check in an online shop and a calculation on a plane — including when the network disappears.</p><p data-i18n="roleText">As the only designer, I owned the product’s visual language, information structure, interaction logic and app icon. The goal was to keep the tool lightweight without making it feel limited.</p></div></div>
-        <div class="screens-showcase"><div class="screen-caption"><p class="eyebrow">01 — <span data-i18n="screenCaption">The essential loop</span></p><p data-i18n="screenText">Choose a currency, enter a number, scan the result. Four rows keep comparison close at hand.</p></div><div class="screen-stack"><img src="public/assets/incurrency-main.png" alt="InCurrency main screen" /><img src="public/assets/incurrency-picker.png" alt="InCurrency currency picker" /></div></div>
-        <div class="decision-grid"><div class="decision-card"><span class="decision-index">01</span><h3 data-i18n="decision1Title">Comparison, not conversion</h3><p data-i18n="decision1Text">Up to four currencies can stay visible together, so users don’t have to repeat the same action for every value.</p></div><div class="decision-card accent-card"><span class="decision-index">02</span><h3 data-i18n="decision2Title">The network is optional</h3><p data-i18n="decision2Text">The last successful sync is kept with its date and time. The app remains useful when a connection is unavailable.</p></div><div class="decision-card"><span class="decision-index">03</span><h3 data-i18n="decision3Title">A calm input experience</h3><p data-i18n="decision3Text">A dedicated numeric keypad and clear actions make the main task easy to complete with one hand.</p></div></div>
-        <div class="wide-screen"><img src="public/assets/incurrency-desktop.png" alt="InCurrency desktop layout" /></div>
-        <div class="states-section"><div class="states-copy"><p class="eyebrow">03 / <span data-i18n="states">States & details</span></p><h3 data-i18n="statesTitle">The details are where trust lives.</h3><p data-i18n="statesText">A useful utility is not only its happy path. I designed for selection, editing, offline mode, last sync, empty values and the small moments that help a user understand what is happening.</p></div><div class="states-list"><div><span>01</span><strong data-i18n="state1">Currency selection</strong><small>Bottom sheet · searchable list</small></div><div><span>02</span><strong data-i18n="state2">Offline mode</strong><small>Last sync date · transparent status</small></div><div><span>03</span><strong data-i18n="state3">Input states</strong><small>Integer · decimal · clear · delete</small></div><div><span>04</span><strong data-i18n="state4">Responsive layout</strong><small>Mobile portrait · desktop split view</small></div></div></div>
-        <div class="case-footer"><span data-i18n="caseFooter">A small product, designed as a complete experience.</span><a class="button button-dark" href="#contact" data-i18n="talk">Let’s talk <span>↗</span></a></div>
-      </section>
-
-      <section class="mas-case section-wrap" id="mas-case">
-        <div class="case-top"><div><p class="eyebrow">03 / <span data-i18n="masCaseLabel">Case study</span></p><h2>MAS Project<br /><em data-i18n="masCaseHeadline">from desktop to pocket.</em></h2></div><div class="case-side"><p data-i18n="masLead">A cross-platform mobile experience for a corporate system used to manage goals, tasks, performance and employee motivation.</p><div class="case-tags"><span>B2B</span><span>Mobile adaptation</span><span>MAS Project</span></div></div></div>
-        <div class="mas-hero-image"><img src="public/assets/mas-project/mobile.webp" alt="MAS Project profile and reports screens" /></div>
-        <div class="mas-product-context"><div><p class="eyebrow" data-i18n="masProductLabel">The product</p><h3 data-i18n="masProductTitle">A single workspace for company effectiveness.</h3></div><div><p data-i18n="masProductText">MAS Project brings operational, strategic and administrative management into one system. The web product connects projects and tasks, people, time, business processes, goals, KPI and analytics.</p><div class="mas-module-list"><span data-i18n="masModule1">Projects & tasks</span><span data-i18n="masModule2">Business processes</span><span data-i18n="masModule3">Goals & KPI</span><span data-i18n="masModule4">HR portal</span><span data-i18n="masModule5">Calendar</span><span data-i18n="masModule6">Analytics</span></div></div></div>
-        <div class="mas-proof"><div><strong>800+</strong><span data-i18n="proof1">KPI indicators in the library</span></div><div><strong>1</strong><span data-i18n="proof2">workspace instead of scattered tools</span></div><div><strong>3</strong><span data-i18n="proof3">steps to introduce the system</span></div></div>
-        <div class="story-grid"><div class="story-label"><span>THE<br />CHALLENGE</span></div><div class="story-copy"><h3 data-i18n="masChallengeTitle">Bring a dense desktop system into a smaller, faster context.</h3><p data-i18n="masChallengeText">MAS Project was originally a desktop system for employee performance, bonuses and non-financial motivation. The mobile app had to preserve the product’s core logic while making everyday actions — checking tasks, opening a report or viewing a profile — accessible on the move.</p><p data-i18n="masRoleText">I worked on the mobile version from information architecture and user flows to interface design, forms, navigation and visual consistency with the wider product.</p></div></div>
-        <div class="mas-features"><div><span>01</span><strong data-i18n="masFeature1">One system, several rhythms</strong><p data-i18n="masFeature1Text">Tasks, calendar, KPI matrix, reports, knowledge base and profile are brought together in one mobile navigation model.</p></div><div><span>02</span><strong data-i18n="masFeature2">Make performance legible</strong><p data-i18n="masFeature2Text">Progress indicators and report summaries help users understand status before they open the detail.</p></div><div><span>03</span><strong data-i18n="masFeature3">Keep the desktop logic</strong><p data-i18n="masFeature3Text">The mobile interface adapts the established product language instead of creating a disconnected second product.</p></div></div>
-        <div class="mas-bottom"><div><p class="eyebrow" data-i18n="masResultLabel">Result</p><p data-i18n="masResult">A released mobile direction for a corporate system, designed to extend the product beyond the desktop workplace.</p></div><div class="mas-links"><a class="button button-dark" href="https://clients.masproject.pro/" target="_blank" rel="noreferrer" data-i18n="viewProduct">View product <span>↗</span></a><a class="button button-dark button-outline" href="https://www.behance.net/gallery/82686185/MAS-Project-mobile-app" target="_blank" rel="noreferrer" data-i18n="viewBehance">View on Behance <span>↗</span></a><p class="app-links-label" data-i18n="appLinksLabel">Download the app</p><div class="store-links"><a href="https://apps.apple.com/by/app/mas-project/id1292369688" target="_blank" rel="noreferrer">App Store</a><a href="https://www.rustore.ru/catalog/app/ru.mas.mas_project" target="_blank" rel="noreferrer">RuStore</a><a href="https://play.google.com/store/apps/details?id=ru.mas.mas_project&amp;hl=en_IN" target="_blank" rel="noreferrer">Google Play</a></div></div></div>
-      </section>
-
-      <section class="about section-wrap" id="about"><div class="section-heading"><p class="eyebrow">04 / <span data-i18n="aboutLabel">About me</span></p><h2 data-i18n="aboutTitle">Curious about<br /><em>how things work.</em></h2></div><div class="about-grid"><div class="about-lead"><p data-i18n="aboutLead">I’m a Product Designer with a background in graphic design and 11+ years of experience. I’m at my best when the problem is complex, the constraints are real and the team wants to make something clearer than it was yesterday.</p><a class="text-link" href="public/assets/resume-daria.pdf" download data-i18n="downloadCv">Download CV <span>↓</span></a></div><div class="about-details"><div><span>FOCUS</span><p data-i18n="focus">B2B products<br />Mobile apps<br />Complex workflows<br />Data-heavy interfaces</p></div><div><span>TOOLKIT</span><p>Figma · Miro · Jira<br />User flows · Prototyping<br />Design systems · Research</p></div><div><span>BASED IN</span><p>Saint Petersburg<br /><span data-i18n="openTo">Open to remote & hybrid</span></p></div></div></div></section>
-
-      <section class="contact section-wrap" id="contact"><div class="contact-card"><p class="eyebrow">04 / <span data-i18n="contactLabel">Contact</span></p><h2 data-i18n="contactTitle">Have a complex<br /><em>problem to untangle?</em></h2><a class="contact-email" href="mailto:nefedevadarya4@gmail.com">nefedevadarya4@gmail.com <span>↗</span></a><div class="contact-bottom"><span>© 2026 Daria Khoroshikh</span><div><a href="mailto:nefedevadarya4@gmail.com">Email</a><a href="https://t.me/Darya_Designer" target="_blank" rel="noreferrer">Telegram</a></div></div></div></section>
-    </main>
-    <footer class="site-footer"><span>DARIA KHOROSHIKH / PRODUCT DESIGNER</span><span>MADE WITH INTENTION</span></footer>
-    <script src="script.js"></script>
+      <section class="constraints shell" aria-labelledby="constraints-title"><div><p class="eyebrow">02 / <span data-ru="реальность проекта" data-en="project reality">реальность проекта</span></p><h2 id="constraints-title" data-ru="Когда «дорого» —<br /><em>это хорошо.</em>" data-en="When “expensive”<br /><em>is good.</em>">Когда «дорого» —<br /><em>это хорошо.</em></h2></div><div class="constraint-panel"><p class="panel-label" data-ru="интерактивная оценка проекта" data-en="interactive project estimate">интерактивная оценка проекта</p><div class="switches"><label><span data-ru="Эффективность" data-en="Effectiveness">Эффективность</span><input class="constraint" type="checkbox" disabled /><b></b></label><label><span data-ru="Скорость" data-en="Speed">Скорость</span><input class="constraint" type="checkbox" checked disabled /><b></b></label><label><span data-ru="Качество" data-en="Quality">Качество</span><input class="constraint" type="checkbox" disabled /><b></b></label><label class="price-switch"><span data-ru="Дорого" data-en="Expensive">Дорого</span><input id="priceToggle" type="checkbox" /><b></b></label></div><p id="constraintMessage" aria-live="polite">Быстро — значит быстро. Остальное требует ресурса.</p></div></section>
+      <section class="about shell" id="about"><div class="about-title"><p class="eyebrow">03 / <span data-ru="обо мне" data-en="about">обо мне</span></p><h2 data-ru="Я задаю вопросы,<br /><em>прежде чем рисовать.</em>" data-en="I ask questions<br /><em>before I draw.</em>">Я задаю вопросы,<br /><em>прежде чем рисовать.</em></h2></div><div class="about-copy"><p data-ru="Работаю на пересечении продуктовой стратегии, UX и UI. Особенно люблю сложные B2B-системы, мобильные приложения и интерфейсы, где ясность влияет на результат." data-en="I work at the intersection of product strategy, UX and UI. I especially enjoy complex B2B systems, mobile apps and interfaces where clarity affects results.">Работаю на пересечении продуктовой стратегии, UX и UI. Особенно люблю сложные B2B-системы, мобильные приложения и интерфейсы, где ясность влияет на результат.</p><div class="about-facts"><span>UX strategy</span><span>Product design</span><span>Design systems</span><span>Mobile apps</span></div><a class="text-link" href="public/assets/resume-daria.pdf" download><span data-ru="Скачать резюме" data-en="Download CV">Скачать резюме</span> ↘</a></div></section>
+      <section class="contact shell" id="contact"><div class="contact-card"><p class="eyebrow">04 / <span data-ru="контакты" data-en="contact">контакты</span></p><h2 data-ru="Есть сложная задача,<br /><em>которую нужно распутать?</em>" data-en="Have a complex problem<br /><em>to untangle?</em>">Есть сложная задача,<br /><em>которую нужно распутать?</em></h2><a href="mailto:nefedevadarya4@gmail.com">nefedevadarya4@gmail.com <span>↗</span></a><footer><span>© 2026 Daria Khoroshikh</span><a href="https://t.me/Darya_Designer" target="_blank" rel="noreferrer">Telegram ↗</a></footer></div></section>
+    </main><script src="script.js"></script>
   </body>
 </html>
